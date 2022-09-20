@@ -5,8 +5,9 @@ import { faBath, faBed, faSignal, faWarehouse, faHeart } from '@fortawesome/free
 const FeaturedProp = ({ properties, filterValue }) => {
     const data = filterValue.length > 0 ? filterValue : properties
     return (
-        <div className='property-list justify-evenly grid grid-cols-3 gap-8'>
-            {data == 'no result found' ? data : data.map((property) => (
+        <div className='property-list  grid grid-cols-3 gap-8 place-items-center '>
+            {data === 'no result found' ? <div class="badge badge-error gap-2  place-self-center top-50 left-50">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>{data}</div> : data.map((property) => (
                 <div className='relative box-content mx-3 w-80 h-fit rounded-lg border border-gray-400  hover:drop-shadow-lg '>
                     <div className='z-0 m-0 w-fit'>
                         <img className='rounded-t-lg' src={property.propertyImage} alt={property.propAlt} srcset="" />
