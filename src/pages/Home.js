@@ -14,7 +14,17 @@ const Home = () => {
     const [filterData, setFilterData] = useState([])
     const [filterValue, setFilterValue] = useState([])
 
-
+    const [properties,setProperties] = useState([
+        {propertyImage: require('../assets/images/2.jpg'), location:"Mumbai", propAlt: "living room with large window", owner: require('../assets/images/p3.jpg'), propName: "Lilys' Apartment", perimeter: 120, propLocation: 'Chavchavadze Ave. 21', numBeds: 3, numBaths: 2, numGarage: 1, numFloor: 12, price: '$100,000'},
+        {propertyImage: require('../assets/images/4.jpg'),location:"Kolkata", propAlt: "perfectly lit white living room", owner: require('../assets/images/p5.jpg'), propName: "Your Lux House", perimeter: 160, propLocation: 'Chavchavadze Ave. 71', numBeds: 4, numBaths: 4, numGarage: 1, numFloor: 19, price: '$180,000'},
+        {propertyImage: require('../assets/images/1.jpg'),location:"Chennai",location:"Goa",propAlt: "living room with kitchen in the background", owner: require('../assets/images/p2.jpg'), propName: "Apartment At The Heart Of The City", perimeter: 90, propLocation: 'Rustaveli Ave. 2', numBeds: 1, numBaths: 1, numGarage: 1, numFloor: 2, price: '$70,000'},
+        {propertyImage: require('../assets/images/3.jpg'),location:"Bangalore", propAlt: "living room with kitchen in the background", owner: require('../assets/images/p6.jpg'), propName: "Nihal's Apartment", perimeter: 320, propLocation: 'Rustaveli Ave. 2', numBeds: 3, numBaths: 2, numGarage:3, numFloor: 5, price: '$170,00'},
+        {propertyImage: require('../assets/images/7.jpg'),location:"Ahmedabad",propAlt: "living room with kitchen in the background", owner: require('../assets/images/p7.jpg'), propName: "Private Apartment", perimeter: 120, propLocation: 'Rustaveli Sec. 12', numBeds: 2, numBaths: 1, numGarage: 1, numFloor: 7, price: '$80,000'},
+        {propertyImage: require('../assets/images/8.jpg'), location:"Delhi", propAlt: "living room with kitchen in the background", owner: require('../assets/images/p8.jpg'), propName: "Zisan's  lux Apartment", perimeter: 190, propLocation: 'Rustaveli Ave. 2', numBeds: 4, numBaths: 2, numGarage: 2, numFloor: 22, price: '$190,000'},
+        {propertyImage: require('../assets/images/9.jpg'),location:"Rajasthan", propAlt: "living room with kitchen in the background", owner: require('../assets/images/p9.jpg'), propName: "Azim's Public Apartment", perimeter: 150, propLocation: 'Rustaveli Ave. 2', numBeds: 2, numBaths: 1, numGarage: 1, numFloor: 27, price: '$120,000'},
+        {propertyImage: require('../assets/images/10.jpg'),location:"Lucknow",propAlt: "living room with kitchen in the background", owner: require('../assets/images/p10.jpg'), propName: "Nissan's House", perimeter: 140, propLocation: 'Rustaveli Ave. 2', numBeds: 1, numBaths: 1, numGarage: 1, numFloor: 32, price: '$50,000'},
+        {propertyImage: require('../assets/images/11.jpg'),location:"Punjab", propAlt: "living room with kitchen in the background", owner: require('../assets/images/p11.jpg'), propName: "Farhad's Apartment", perimeter: 70, propLocation: 'Rustaveli Ave. 2', numBeds: 3, numBaths: 2, numGarage: 1, numFloor: 9, price: '$90,000'},
+    ])
 
     const [options,] = useState([
         { title: 'Find Your Dream House', description: 'We provide various types of houses from the cheapest to Premium', icon: <FontAwesomeIcon icon={faPaperPlane} /> },
@@ -23,12 +33,7 @@ const Home = () => {
         { title: 'Low Cost on Taxes', description: 'Buying or renting a house through our company you get discounts on taxes', icon: <FontAwesomeIcon icon={faFileInvoiceDollar} /> }
     ])
 
-    const [properties, setProperties] = useState([
-        { propertyImage: require('../assets/images/2.jpg'), location: "Mumbai", propAlt: "living room with large window", owner: require('../assets/images/p3.jpg'), propName: "Lilys' Apartment", perimeter: 120, propLocation: 'Chavchavadze Ave. 21', numBeds: 3, numBaths: 2, numGarage: 1, numFloor: 12, price: '$100,000' },
-        { propertyImage: require('../assets/images/4.jpg'), propAlt: "perfectly lit white living room", owner: require('../assets/images/p5.jpg'), propName: "Your Lux House", perimeter: 160, propLocation: 'Chavchavadze Ave. 71', numBeds: 4, numBaths: 4, numGarage: 1, numFloor: 19, price: '$180,000' },
-        { propertyImage: require('../assets/images/1.jpg'), location: "Goa", propAlt: "living room with kitchen in the background", owner: require('../assets/images/p2.jpg'), propName: "Apartment At The Heart Of The City", perimeter: 90, propLocation: 'Rustaveli Ave. 2', numBeds: 1, numBaths: 1, numGarage: 1, numFloor: 2, price: '$70,000' },
-        { propertyImage: require('../assets/images/3.jpg'), propAlt: "living room with kitchen in the background", owner: require('../assets/images/p4.jpg'), propName: "Jay's Apartment", perimeter: 90, propLocation: 'Rustaveli Ave. 2', numBeds: 1, numBaths: 1, numGarage: 1, numFloor: 2, price: '$70,000' },
-    ])
+    
 
     useEffect(() => {
         let data = [];

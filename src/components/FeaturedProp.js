@@ -5,7 +5,7 @@ import { faBath, faBed, faSignal, faWarehouse, faHeart } from '@fortawesome/free
 const FeaturedProp = ({ properties, filterValue }) => {
     const data = filterValue.length > 0 ? filterValue : properties
     return (
-        <div className='property-list justify-evenly flex flex-row'>
+        <div className='property-list justify-evenly grid grid-cols-3 gap-8'>
             {data == 'no result found' ? data : data.map((property) => (
                 <div className='relative box-content mx-3 w-80 h-fit rounded-lg border border-gray-400  hover:drop-shadow-lg '>
                     <div className='z-0 m-0 w-fit'>
